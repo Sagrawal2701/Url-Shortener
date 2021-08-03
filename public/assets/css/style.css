@@ -1,0 +1,119 @@
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+  }
+  body{
+    max-height: 100vh;
+    background-image: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container{
+    background-color: #fff;
+    width: 500px;
+    height: 340px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+  .logo{
+    margin-left: 220px;
+    margin-top: 20px;
+  }
+  .heading{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    color: #1e3d59;
+    letter-spacing: 1.5px;
+  }
+  .box1{
+    margin-top: 10px;
+    margin-left: 70px;
+  }
+  .box1 label{
+     font-size: 20px;
+     font-weight: bold;
+     color: #000;
+     letter-spacing: 1px;
+  }
+  .form input{
+    width: 360px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 70px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 6px;
+  }
+  .form input:focus{
+    border-bottom-color: #1e3d59 !important;
+    border-radius: 6px;
+    box-shadow: none;
+    outline: 0;
+  }
+  .shorten-url {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 30px;
+    margin-left: 150px;
+    background:#1e3d59;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: all ease-in-out 300ms;
+  }
+  .shorten-url:hover{
+    box-shadow: none;
+    background: #355a7a;
+  }
+  @media only screen and (max-width: 500px) {
+    .container{
+      width:360px;
+      height: 340px;
+    }
+    .heading{
+      font-size: 30px;
+    }
+    .box1{
+      margin-top: 5px;
+      margin-left: 60px;
+    }
+    .box1 label{
+       font-size: 18px;
+       font-weight: bold;
+       color: #000;
+       letter-spacing: 0.5px;
+    }
+    .logo{
+      margin-left: 160px;
+      margin-top: 20px;
+    }
+    .form input{
+      width: 240px;
+      height: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-left: 60px;
+    }
+    .shorten-url{
+      width: 120px;
+      margin-left: 120px;
+      font-weight: bold;
+    }
+  }
+  

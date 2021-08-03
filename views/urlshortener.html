@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-SHORTENER</title>
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="../public/assets/img/logo.png" alt="" class="logo" width="60" height="60">
+        <h1 class="heading">URL-SHORTENER</h1>
+        <form action="/api/short" method="post">
+            <div class="box1">
+                <label for="origurl">Enter Original URL</label>
+            </div>
+            <div class="form" id="origurl">
+                <input type="text" placeholder="Original URL" class="form" name="originalurl" />
+            </div>
+            <button type="submit" class="shorten-url">Shorten URL</button>
+        </form>
+    </div>
+    
+</body>
+
+</html>
