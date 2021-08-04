@@ -14,7 +14,7 @@ router.post('/short', async (req, res) => {
       try {
         let url = await Url.findOne({ origUrl });
         if (url) {
-          res.json(url);
+          res.json(shorturl);
         } else {
           const shortUrl = `${base}/${urlId}`;
           url = new Url({
