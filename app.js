@@ -11,14 +11,14 @@ app.use(Express.json());
 
 app.use('/public', Express.static(path.join(__dirname, 'public')))
 
-app.use('/fincess', require('./routes/index'));
+app.use('/', require('./routes/index'));
 app.use('/api', require('./routes/urls'));
 
-app.get('/fincess', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(__dirname + "/views/urlshortener.html");
 })
 
-const PORT = 8000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is listening at port ${PORT}`);
 });
