@@ -26,5 +26,8 @@
     "url": "https://github.com/Sagrawal2701/Url-Shortener/issues"
   },
   "homepage": "https://github.com/Sagrawal2701/Url-Shortener#readme",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "14.x"
+  }
 }
