@@ -15,17 +15,35 @@
     <div class="container">
         <img src="../public/assets/img/logo.png" alt="" class="logo" width="60" height="60">
         <h1 class="heading">URL-SHORTENER</h1>
-        <form action="/api/short" method="post">
+        <form>
             <div class="box1">
                 <label for="origurl">Enter Original URL</label>
             </div>
             <div class="form" id="origurl">
-                <input type="text" placeholder="Original URL" class="form" name="originalurl" />
+                <input type="text" placeholder="Original URL" class="form" id="url" name="originalurl" />
+                <button id="submit" class="shorten-url">Shorten URL</button>
             </div>
-            <button type="submit" class="shorten-url">Shorten URL</button>
         </form>
+        <div class="box1">
+            <label for="origurl">Shortened URL</label>
+        </div>
+        <div id="shorturl" class="output"></div>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            $(function () {
+                $('#submit').click(function (e) {
+                    e.preventDefault();
+                    var url = $('#url').val();
+                    $.post('/api/short', {
+                        url: url
+                    }, function (data) {
+                        $('#shorturl').html('<a>'+data+'</a>');
+                    })
+                })
+            })
+        </script>
     </div>
-    
+
 </body>
 
 </html>

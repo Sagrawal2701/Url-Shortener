@@ -11,10 +11,10 @@ app.use(Express.json());
 
 app.use('/public', Express.static(path.join(__dirname, 'public')))
 
-app.use('/', require('./routes/index'));
+app.use('/fincess', require('./routes/index'));
 app.use('/api', require('./routes/urls'));
 
-app.get('/', function (req, res) {
+app.get('/fincess', function (req, res) {
   res.sendFile(__dirname + "/views/urlshortener.html");
 })
 

@@ -2,7 +2,7 @@ const Express = require('express');
 const Url = require('../models/Url');
 const router = Express.Router();
 
-router.get('/fincess/:urlId', async (req, res) => {
+router.get('/:urlId', async (req, res) => {
   try {
     const url = await Url.findOne({ urlId: req.params.urlId });
     if (url) {
