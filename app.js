@@ -12,12 +12,11 @@ app.use(Express.json());
 app.use('/public', Express.static(path.join(__dirname, 'public')))
 
 app.use('/', require('./routes/index'));
+app.use('/api', require('./routes/urls'));
 
-app.get('/api/short', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(__dirname + "/views/urlshortener.html");
 })
-
-app.use('/api', require('./routes/urls'));
 
 const PORT = 8000;
 app.listen(PORT, () => {
