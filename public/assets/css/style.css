@@ -10,8 +10,7 @@ body{
   background-size: cover;
 }
 .container{
-  background: inherit;
-      backdrop-filter: blur(10px);
+  background-color: #fff;
   width: 530px;
   height: 460px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
@@ -37,6 +36,7 @@ body{
 .box1{
   margin-top: 45px;
   margin-left: 60px;
+
 }
 .box1 label{
    font-size: 20px;
@@ -97,7 +97,7 @@ body{
     font-size: 30px;
   }
   .box1{
-    margin-top: 5px;
+    margin-top: 15px;
     margin-left: 35px;
   }
   .box1 label{
@@ -106,8 +106,8 @@ body{
      color: #000;
      letter-spacing: 0.5px;
   }
-  .logo{
-    margin-left: 160px;
+  .fincess{
+    margin-left: 70px;
     margin-top: 20px;
   }
   .form input{
