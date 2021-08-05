@@ -7,8 +7,11 @@ require('dotenv').config({ path: '../config/.env' });
 
 // Short URL Generator
 router.post('/short', async (req, res) => {
-    const origUrl = req.body.url;
-    
+    var origUrl = req.body.url;
+    var pattern = /^((http|https|ftp):\/\/)/;
+    if(!pattern.test(origUrl)) {
+      origUrl = "http://" + origUrl;
+    }
     const base = process.env.BASE;
     const urlId = shortid.generate();
     if (utils.validateUrl(origUrl)) {
